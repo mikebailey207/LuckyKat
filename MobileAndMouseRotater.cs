@@ -14,7 +14,7 @@ public class MobileAndMouseRotater : MonoBehaviour
         Rotate();
     }
 
-    private void Rotate()
+    private void Rotate() // Rotate game object (helix) with touch input (and mouse)
     {
         if(Input.GetMouseButton(0))
        {
@@ -29,11 +29,7 @@ public class MobileAndMouseRotater : MonoBehaviour
 
             lastInputPos = currentInputPos;
 
-            transform.Rotate(Vector3.up * turnAmount / 5);
+            transform.Rotate(Vector3.up * turnAmount / 5); // this seemed to work as a figure, though I may add sensitivity to the options screen in a full version
        }
-       /* if(Input.GetMouseButtonUp(0))
-        {
-            lastInputPos = currentInputPos;
-        }*/
     }
 }

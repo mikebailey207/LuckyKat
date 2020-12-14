@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class Countdown : MonoBehaviour
+public class Countdown : MonoBehaviour // An afterthought, this would be developed further, for now it occurs only on the first level
 {
     public float countdown = 3;
     public GameObject countdownTextGO;
@@ -27,8 +27,7 @@ public class Countdown : MonoBehaviour
         countdownText.text = countdown.ToString("0");
         countdown -= Time.deltaTime;
         StartCoroutine(RemoveCountDown());
-        if (countdown < 0.5f) countdownText.text = "SPLASHDOWN";
-
+        if (countdown < 0.5f) countdownText.text = "SPLASH";
     }
     IEnumerator RemoveCountDown()
     {

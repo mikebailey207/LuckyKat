@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour /*class to essentially add and store scores, 
+     could have been a score manager, but could be developed further later. 
+     In a full version of the game I would probably have some of the 
+     functions within the BallController class in here instead
+     of there. */
 {
     public static GameManager singleton;
 

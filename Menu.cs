@@ -6,17 +6,10 @@ public class Menu : MonoBehaviour
 {
     [SerializeField]
     GameObject game;
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            StartPlay();
-        }
-    }
+
     public void StartPlay()
     {
-        Debug.Log("Click");
-        game.SetActive(true);
+        game.SetActive(true); // I have the entire playable game collapsed in the hierachy to load from here
         Destroy(gameObject);
     }
 }
